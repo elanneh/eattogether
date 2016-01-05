@@ -1,0 +1,49 @@
+#head{
+	background-color:lightgray;
+	width: 300px;
+	border-radius: 10px 10px 10px 10px;
+	padding: 10px 10px 10px 10px;
+	margin-bottom: 5px;
+	text-align: center;
+	display: inline-block;
+	vertical-align: top;
+}
+#head h1{
+	font: 20pt Helvetica, sans-serif;
+	font-weight: bolder;
+}
+#head p{
+	font: 12pt Helvetica, sans-serif;
+	font-weight: lighter;	
+}
+button{
+	padding: 10px 10px 10px 10px;
+	font: 12pt Helvetica, sans-serif;
+	font-weight: bolder;
+}
+#appetizer, #entree, #dessert{
+	display: inline-block;
+	vertical-align: top;
+}
+
+.rsvp{
+	background-color: darkgray;
+	width: 300px;
+	border-radius: 10px 10px 10px 10px;
+	padding: 10px 10px 10px 10px;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+	margin-bottom: 5px;
+}
+#appetizer, #entree, #dessert h2{
+	font: 18pt Helvetica, sans-serif;
+	font-weight: bolder;
+}#appetizer, #entree, #dessert h3{
+	font: 14pt Helvetica, sans-serif;
+	font-weight: light;
+}
+#appetizer, #entree, #dessert p{
+	font: 12pt Helvetica, sans-serif;
+	font-weight: lighter;
+}
