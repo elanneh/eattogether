@@ -2,8 +2,11 @@
 	font-family: Helvetica, sans-serif;
 }
 body{
-	background-image: url("feast.jpg");
-	background-color: black;
+	background:
+	    linear-gradient(
+      		rgba(0, 0, 0, 0.3), 
+      		rgba(0, 0, 0, 0.3)
+    		), url("feast.jpg");
 }
 h3{
 	font: 14pt Helvetica, sans-serif;
@@ -12,6 +15,7 @@ h3{
 
 #head{
 	background-color:lightgray;
+	opacity: 0.8;
 	width: 200px;
 	border-radius: 10px 10px 10px 10px;
 	padding: 10px 10px 20px 10px;
@@ -20,13 +24,13 @@ h3{
 	display: inline-block;
 	vertical-align: top;
 }
-#head h1{
-	font: 18pt Helvetica, sans-serif;
-	font-weight: bolder;
-}
-#head p{
-	font: 10pt Helvetica, sans-serif;
-	font-weight: lighter;	
+	#head h1{
+		font: 18pt Helvetica, sans-serif;
+		font-weight: bolder;
+	}
+	#head p{
+		font: 10pt Helvetica, sans-serif;
+		font-weight: lighter;	
 }
 #button{
 	padding: 10px 10px 10px 10px;
@@ -60,7 +64,37 @@ h3{
 	-webkit-border-radius: 100px;
 	text-align: center;
 	margin-bottom: 5px;
-	padding: 4px 3px 0 3px;
+	padding: 4px 3px 0px 3px;
+}
 
+@media  
+  (min-width: 320px) 
+  and (max-width: 414px) 
+  { 
+	#head{
+		width: 100%;
+		margin: 0 auto;
+
+	}
+	#appetizer, #entree, #dessert{
+		width: 100%;
+	}
+	.rsvp, .rsvp_label{
+		margin: 0 auto;
+	}	
+}
+
+@media  
+  (min-width: 414px) 
+  and (max-width: 768px) 
+  { 
+	#head{
+		width: 90%;
+		margin: 0 auto;
+
+	}
+	.rsvp, .rsvp_label{
+		margin: 0 auto;
+	}	
 }
 
