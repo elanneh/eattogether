@@ -15,12 +15,12 @@
 			for(i=0; i<res.length; i++){
 
 				if(res[i].type === "appetizer"){
-					$("#appetizer").append("<div class='rsvp'>" + "<h2>" + res[i].name + "</h2>" + "<p>is bringing " + res[i].dish + " (" + res[i].type + ")</p></div>");
+					$("#appetizer").append("<div class='rsvp'>" + "<h3>" + res[i].name + "<br><br>" + res[i].dish + " </h3></div>");
 				}else if(res[i].type === "entree"){
-					$("#entree").append("<div class='rsvp'>" + "<h2>" + res[i].name + "</h2>" + "<p>is bringing " + res[i].dish + " (" + res[i].type + ")</p></div>");
+					$("#entree").append("<div class='rsvp'>" + "<h3>" + res[i].name + "<br><br>" + res[i].dish + " </h3></div>");
 				} else if(res[i].type === "dessert"){
 
-					$("#dessert").append("<div class='rsvp'>" + "<h2>" + res[i].name + "</h2>" + "<p>is bringing " + res[i].dish + " (" + res[i].type + ")</p></div>");
+					$("#dessert").append("<div class='rsvp'>" + "<h3>" + res[i].name + "<br><br>" + res[i].dish + " </h3></div>");
 					}
 				}
 			});
@@ -47,21 +47,20 @@
 </head>
 <body>	
 	<div id="head">
-		<h1>Let's Eat Together!</h1>
-		<h2>Event Details</h2>
-			<h3>Name of Event</h3>
-			<p>Friendsgiving Potluck!</p>
-			<h3>Date/Time</h3>
-			<p>November 28, 2016</p>
-			<p>7:00pm - 10:00pm</p>
-			<h3>Location:</h3>
-			<p>123 Spring Street</p>
-			<p>Yourtown, CA 99999</p>
+		<h1>Let's Eat Together!</h1>	
+		<h3>Name of Event</h3>
+		<p>Friendsgiving Potluck!</p>
+		<h3>Date/Time</h3>
+		<p>November 28, 2016</p>
+		<p>7:00pm - 10:00pm</p>
+		<h3>Location:</h3>
+		<p>123 Spring Street</p>
+		<p>Yourtown, CA 99999</p>
 	
-		<h2>What are you bringing?</h2>	
+		<h3>What are you bringing?</h3>	
 
 		<form id="rsvp_form" action="/guests" method="post">
-			<p><input type="text" class="input" name="name" placeholder="Please enter your name"></p>
+			<p><input type="text" class="input" name="name" placeholder="Your Name"></p>
 			<p><input type="text" class="input" name="dish" placeholder="What are you bringing?"></p>
 			<p>Type of dish?</p>
 			<p><select name="type">
@@ -69,14 +68,26 @@
 				<option value="entree">Entree</option>
 				<option value="dessert">Dessert</option>
 			</select></p>
-			<input type="submit" value="Let's eat!">
+			<input type="submit" id="button" value="Let's eat!">
 		</form>	
 	</div>
 	<div id="appetizer">
+		<div class="rsvp_label">
+			<br><br>
+			<h3>Appetizers</h3>
+		</div>
 	</div>
 	<div id="entree">
+		<div class="rsvp_label">
+			<br><br>
+			<h3>Entrees</h3>
+		</div>	
 	</div>
 	<div id="dessert">
+		<div class="rsvp_label">
+			<br><br>
+			<h3>Desserts</h3>
+		</div>
 	</div>
 
 </body>

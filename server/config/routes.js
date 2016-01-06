@@ -27,6 +27,4 @@ module.exports = function(app) {
 	// Update
 	.put('/guests/:id', function(request, response) { 
 		guests.update(request, response) })
-
-
 };
