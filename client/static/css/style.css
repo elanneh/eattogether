@@ -1,5 +1,5 @@
 *{
-	font-family: Helvetica, sans-serif;
+	font-family: Georgia, serif;
 }
 body{
 	background:
@@ -9,37 +9,52 @@ body{
     		), url("feast.jpg");
 }
 h3{
-	font: 14pt Helvetica, sans-serif;
+	font: 14pt Georgia, serif;
 	font-weight: bolder;
 }
 
 #head{
-	background-color:lightgray;
-	opacity: 0.8;
-	width: 200px;
-	border-radius: 10px 10px 10px 10px;
-	padding: 10px 10px 20px 10px;
-	margin-bottom: 5px;
+	color: white;
+	margin: 0 auto;
 	text-align: center;
-	display: inline-block;
 	vertical-align: top;
 }
 	#head h1{
-		font: 18pt Helvetica, sans-serif;
-		font-weight: bolder;
+		font-family: 'Playfair Display', serif;
+		font-size: 65pt;
+		font-weight: 900;
+		margin-bottom: 60px;
 	}
-	#head p{
-		font: 10pt Helvetica, sans-serif;
-		font-weight: lighter;	
+
+#form{
+
+	width: 400px;
+	height: 400px;
+	color: white;
+	margin: 0 auto;
+	padding: 10px 10px 20px 10px;
+	text-align: center;
+	display: inline-block;
+	vertical-align: top;
+}	
+	#form p{
+		font: 10pt, Georgia, serif;
+		font-style: normal;
+		font-weight: 400;	
+
 }
+
 #button{
 	padding: 10px 10px 10px 10px;
-	font: 12pt Helvetica, sans-serif;
+	font: 12pt Georgia, serif;
 	font-weight: bolder;
 }
+
 #appetizer, #entree, #dessert{
 	display: inline-block;
 	vertical-align: top;
+	padding: 20px 30px 30px 30px;
+	margin: 0 auto;
 }
 
 .rsvp{
@@ -71,30 +86,51 @@ h3{
   (min-width: 320px) 
   and (max-width: 414px) 
   { 
-	#head{
+	#form{
 		width: 100%;
 		margin: 0 auto;
-
 	}
 	#appetizer, #entree, #dessert{
 		width: 100%;
+		padding: 10px;
 	}
 	.rsvp, .rsvp_label{
 		margin: 0 auto;
-	}	
+	}
 }
 
 @media  
   (min-width: 414px) 
   and (max-width: 768px) 
   { 
-	#head{
-		width: 90%;
+	#form{
+		width: 100%;
 		margin: 0 auto;
 
+	}
+	#appetizer, #entree, #dessert{
+		width: 100%;
+		padding: 10px;
+
+	}
+		.rsvp, .rsvp_label{
+		margin: 0 auto;
+	}
+
+}
+
+
+@media  
+  (min-width: 768px) 
+  and (max-width: 1094px) 
+  { 
+
+	#appetizer, #entree, #dessert{
+		padding: 0px 0px 0px 0px !important;
 	}
 	.rsvp, .rsvp_label{
 		margin: 0 auto;
 	}	
+
 }
 
