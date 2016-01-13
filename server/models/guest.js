@@ -7,4 +7,3 @@ var GuestSchema = new mongoose.Schema({
 });
 
 mongoose.model('Guest', GuestSchema);
-// BucketSchema.path('name').required(true, "Bucket Name is required");

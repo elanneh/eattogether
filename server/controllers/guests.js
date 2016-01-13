@@ -4,15 +4,14 @@ var Guest = mongoose.model('Guest');
 module.exports = (function() {
 	return {
 		index: function(request, response){
-			console.log("Server / Ctrl / Guest - Index")
+			console.log("Server / Ctrl / Guests - Index")
 			Guest.find({}, function(err, res){
 				if(err){
 					console.log(err);
 					response.json(err);
 					
 				}else{
-			
-					response.json(res);
+								response.json(res);
 				}
 			})
 		},

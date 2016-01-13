@@ -1,50 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
 	<meta charset="utf-8">
 	<title>Let's Eat Together!</title>
 	<script src="./js/jquery-2.1.4.js"></script>
-	<script src="/socket.io/socket.io.js"></script>
+	<script src="./js/script.js"></script>	
 	<link rel="stylesheet" href="./css/style.css" />
 	<link href='https://fonts.googleapis.com/css?family=Playfair+Display:900italic' rel='stylesheet' type='text/css'>
-	<script type="text/javascript">
-
-		$(document).ready(function(){
-			var socket = io.connect();
-
-			$.get('/guests', function(res){
-			for(i=0; i<res.length; i++){
-
-				if(res[i].type === "appetizer"){
-					$("#appetizer").append("<div class='rsvp'>" + "<h3>" + res[i].name + "<br><br>" + res[i].dish + " </h3></div>");
-				}else if(res[i].type === "entree"){
-					$("#entree").append("<div class='rsvp'>" + "<h3>" + res[i].name + "<br><br>" + res[i].dish + " </h3></div>");
-				} else if(res[i].type === "dessert"){
-
-					$("#dessert").append("<div class='rsvp'>" + "<h3>" + res[i].name + "<br><br>" + res[i].dish + " </h3></div>");
-					}
-				}
-			});
-
-			$("#rsvp_form").submit(function(){
-				var input = $(".input").val();
-					if(input === ""){
-						alert("no freeloaders!!");
-						return false;
-						
-				}
-				else{
-					$.post('/guests', function(response){
-						location.reload();
-						console.log(response);
-				
-					});
-				}
-			});
-		
-		});
-
-	</script>
 </head>
 <body>	
 	<div id="head">
@@ -52,7 +13,6 @@
 	</div>
 
 	<div id="form">		
-		
 		<h3>Event Details</h3> <p>Friendsgiving Potluck!</p>
 		<p>November 28, 2016 @ 7:00pm - 10:00pm</p>
 		<p>123 Spring Street, Yourtown, CA 99999</p>
@@ -90,6 +50,5 @@
 			<h3>Desserts</h3>
 		</div>
 	</div> 	
-
 </body>
 </html>
